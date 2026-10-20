@@ -1,0 +1,14 @@
+#buttons {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1, h2 {
+    text-align: center;
+    color:white;
+}
+#bgButton {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}

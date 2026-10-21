@@ -16,3 +16,7 @@ h1, h2, p, summary {
 summary {
     margin-top: 20px;
 }
+p {
+    padding-left: 100px;
+    padding-right: 100px;
+}

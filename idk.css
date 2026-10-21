@@ -6,6 +6,7 @@
 h1, h2, p, summary {
     text-align: center;
     color:white;
+    font-weight: bold;
 }
 #bgButton {
     max-width: fit-content;

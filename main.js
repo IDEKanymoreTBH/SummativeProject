@@ -50,7 +50,7 @@ async function toggleBG() {
 
 let bg;
 cookieStore.get("turnOffBG").then((val) => {
-    if(val.value) bg = val.value; else bg = "none";
+    if(val && val.value) bg = val.value; else bg = "none";
     console.log(val);
 }, (reason) => {
     console.log(reason);

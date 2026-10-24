@@ -26,52 +26,6 @@ function goToHome() {
     window.location.search = "home";
 }
 
-async function toggleBG() {
-    cookieStore.get("turnOffBG").then((val) => {
-        if(val && val.value) {
-            if(val.value === "yes") {
-                alert("Turning On Background...");
-                document.body.style.backgroundImage = "url('resources/BG.png')";
-                document.body.style.backgroundSize = "250px 250px";
-                cookieStore.set("turnOffBG", "no").then((val) => {
-                    alert("Turned On.");
-                }, (reason) => alert("Failed. Reason: " + reason));
-            } else {
-                alert("Turning Off Background...");
-                document.body.style.backgroundImage = "none";
-                document.body.style.backgroundColor = "black";
-                cookieStore.set("turnOffBG", "yes").then((val) => {
-                    alert("Turned Off");
-                }, (reason) => alert("Failed. Reason: " + reason));
-            }
-        }
-    });
-}
-
-let bg;
-cookieStore.get("turnOffBG").then((val) => {
-    if(val != null) {
-        if(val.value != null) {
-            bg = val.value;
-        } else {
-            bg = "none";
-        }
-    }
-    console.log(val);
-}, (reason) => {
-    console.log(reason);
-}).then(() => {
-    if(bg === "yes") {
-        document.body.style.backgroundImage = "none";
-        document.body.style.backgroundColor = "black";
-    } else {
-        document.body.style.backgroundImage = "url('resources/BG.png')";
-        document.body.style.backgroundSize = "250px 250px";
-    }
-});
-
-window.bg = bg;
-
 switch(window.location.search) {
     case "?page=Time_Mgmt_Strats":
         document.body.innerHTML = "<h1>Time Management Strategies</h1><h2>Pomodoro Technique</h2>" +

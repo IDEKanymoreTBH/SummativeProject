@@ -28,7 +28,7 @@ function goToHome() {
 
 async function toggleBG() {
     cookieStore.get("turnOffBG").then((val) => {
-        if(val.value) {
+        if(val && val.value) {
             if(val.value === "yes") {
                 alert("Turning On Background...");
                 document.body.style.backgroundImage = "url('resources/BG.png')";

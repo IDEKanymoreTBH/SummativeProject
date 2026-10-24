@@ -52,7 +52,9 @@ let bg;
 cookieStore.get("turnOffBG").then((val) => {
     if(val != null) {
         if(val.value != null) {
-            bg = val.value; else bg = "none";
+            bg = val.value;
+        } else {
+            bg = "none";
         }
     }
     console.log(val);
